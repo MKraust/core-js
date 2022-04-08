@@ -1,0 +1,15 @@
+{
+  "name": "@mkraust/tsconfig",
+  "main": "base.json",
+  "version": "1.0.0",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mkraust/core.git"
+  },
+  "author": "Mikhail Sklyarov <kraust137@gmail.com>",
+  "license": "ISC",
+  "publishConfig": {
+    "access": "public"
+  }
+}
