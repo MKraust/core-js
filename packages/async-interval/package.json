@@ -1,0 +1,15 @@
+{
+  "name": "@mkraust/async-interval",
+  "version": "0.0.0",
+  "author": "Mikhail Sklyarov <kraust137@gmail.com>",
+  "license": "ISC",
+  "main": "index.ts",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MKraust/core-js.git"
+  }
+}
