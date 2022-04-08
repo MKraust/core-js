@@ -3,13 +3,10 @@
   "version": "0.1.0",
   "author": "Mikhail Sklyarov <kraust137@gmail.com>",
   "license": "ISC",
-  "main": "index.ts",
-  "directories": {
-    "lib": "lib"
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc"
   },
-  "files": [
-    "lib"
-  ],
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org"
@@ -20,5 +17,8 @@
   },
   "dependencies": {
     "axios": "^0.26.1"
+  },
+  "devDependencies": {
+    "@mkraust/tsconfig": "file:../tsconfig"
   }
 }

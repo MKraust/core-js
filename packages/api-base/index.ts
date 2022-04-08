@@ -1,3 +1,3 @@
-export * from './lib/api-wrapper'
-export * from './lib/client'
-export * from './lib/error-handler'
+export * from './src/api-wrapper'
+export * from './src/client'
+export * from './src/error-handler'

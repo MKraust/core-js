@@ -5,9 +5,7 @@
     "packages/*"
   ],
   "devDependencies": {
-    "lerna": "^4.0.0"
-  },
-  "dependencies": {
+    "lerna": "^4.0.0",
     "@mkraust/eslint-config": "file:packages/eslint-config",
     "@mkraust/tsconfig": "file:packages/tsconfig",
     "eslint-import-resolver-typescript": "^2.7.1",

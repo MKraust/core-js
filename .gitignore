@@ -4,5 +4,6 @@ npm-debug.log*
 .DS_Store
 node_modules/
 .npm
-dist
 .idea
+dist
+package-lock.json
