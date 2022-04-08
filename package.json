@@ -1,5 +1,5 @@
 {
-  "name": "root",
+  "name": "@mkraust/core",
   "private": true,
   "packages": ["packages/*"],
   "devDependencies": {

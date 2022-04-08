@@ -5,7 +5,7 @@
   "description": "",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mkraust/core.git"
+    "url": "https://github.com/mkraust/core-js.git"
   },
   "author": "Mikhail Sklyarov <kraust137@gmail.com>",
   "license": "ISC",
