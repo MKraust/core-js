@@ -1,7 +1,7 @@
 {
   "name": "@mkraust/redux-dymanic",
   "main": "dist/index.js",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "",
   "scripts": {
     "build": "tsc"
