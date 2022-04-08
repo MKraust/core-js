@@ -1,0 +1,22 @@
+{
+  "name": "@mkraust/types",
+  "main": "dist/index.js",
+  "version": "0.0.0",
+  "description": "",
+  "scripts": {
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mkraust/core-js.git"
+  },
+  "author": "Mikhail Sklyarov <kraust137@gmail.com>",
+  "license": "ISC",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "dependencies": {
+    "@mkraust/tsconfig": "file:../tsconfig"
+  }
+}
