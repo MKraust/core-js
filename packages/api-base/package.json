@@ -1,0 +1,24 @@
+{
+  "name": "@mkraust/api-base",
+  "version": "0.0.0",
+  "author": "Mikhail Sklyarov <kraust137@gmail.com>",
+  "license": "ISC",
+  "main": "index.ts",
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MKraust/core-js.git"
+  },
+  "dependencies": {
+    "axios": "^0.26.1"
+  }
+}

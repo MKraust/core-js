@@ -1,8 +1,16 @@
 {
   "name": "@mkraust/core",
   "private": true,
-  "packages": ["packages/*"],
+  "packages": [
+    "packages/*"
+  ],
   "devDependencies": {
     "lerna": "^4.0.0"
+  },
+  "dependencies": {
+    "@mkraust/eslint-config": "file:packages/eslint-config",
+    "@mkraust/tsconfig": "file:packages/tsconfig",
+    "eslint-import-resolver-typescript": "^2.7.1",
+    "typescript": "^4.6.3"
   }
 }
