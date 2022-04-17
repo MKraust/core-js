@@ -1,6 +1,6 @@
 {
   "name": "@mkraust/async-interval",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "author": "Mikhail Sklyarov <kraust137@gmail.com>",
   "license": "ISC",
   "main": "dist/index.js",
