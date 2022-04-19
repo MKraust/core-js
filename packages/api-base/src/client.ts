@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse, ResponseType } from 'axios'
-import FormData from 'form-data'
+import FormDataPolyfill = require('form-data')
 
 export type QueryParamsType = Record<string | number, unknown>
 
@@ -38,7 +38,7 @@ export class HttpClient {
     }
   }
 
-  private createFormData(input: Record<string, unknown>): FormData {
+  private createFormData(input: Record<string, unknown>): FormDataPolyfill {
     return Object.keys(input || {}).reduce((formData, key) => {
       const property = input[key]
 
@@ -62,7 +62,7 @@ export class HttpClient {
       formData.append(key, value as Blob | string)
 
       return formData
-    }, new FormData())
+    }, new FormDataPolyfill())
   }
 
   public request = async <T = any>({
