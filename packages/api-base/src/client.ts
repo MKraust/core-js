@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse, ResponseType } from 'axios'
-import FormData from 'form-data'
 
 export type QueryParamsType = Record<string | number, unknown>
 

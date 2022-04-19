@@ -16,8 +16,7 @@
     "url": "https://github.com/MKraust/core-js.git"
   },
   "dependencies": {
-    "axios": "^0.26.1",
-    "form-data": "^4.0.0"
+    "axios": "^0.26.1"
   },
   "devDependencies": {
     "@mkraust/tsconfig": "file:../tsconfig"
