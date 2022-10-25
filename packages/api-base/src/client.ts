@@ -19,10 +19,14 @@ export interface FullRequestParams extends Omit<AxiosRequestConfig, 'data' | 'pa
 
 export type ConcreteMethodRequestParams = Omit<FullRequestParams, 'path' | 'method'>
 
+export interface HttpClientConfig {
+  addSquareBracketsToFormDataArrayKeys?: boolean
+}
+
 export class HttpClient {
   private instance: AxiosInstance
 
-  constructor(axios: AxiosInstance) {
+  constructor(axios: AxiosInstance, private config: HttpClientConfig) {
     this.instance = axios
   }
 
@@ -43,7 +47,10 @@ export class HttpClient {
 
       if (Array.isArray(property)) {
         property.forEach((item) => {
-          formData.append(key, item as Blob | string)
+          formData.append(
+            this.config.addSquareBracketsToFormDataArrayKeys ? `${key}[]` : key,
+            item as Blob | string,
+          )
         })
 
         return formData
@@ -107,7 +114,7 @@ export class HttpClient {
 export class Api {
   http: HttpClient
 
-  constructor(private axios: AxiosInstance) {
-    this.http = new HttpClient(axios)
+  constructor(private axios: AxiosInstance, private config: HttpClientConfig) {
+    this.http = new HttpClient(axios, config)
   }
 }
