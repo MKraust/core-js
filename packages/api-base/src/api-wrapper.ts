@@ -1,9 +1,10 @@
 import AxiosBase, { AxiosInstance } from 'axios'
+import { HttpClientConfig } from './client';
 
 export type AuthProvider = { logout: () => void }
 export type ApiConstructor<T> = new (axios: AxiosInstance) => T
 
-export function createService<T>(Api: ApiConstructor<T>, basePath: string, authProvider?: AuthProvider): T {
+export function createService<T>(Api: ApiConstructor<T>, basePath: string, authProvider?: AuthProvider, config: HttpClientConfig = {}): T {
   const axios = AxiosBase.create({
     timeout: 59000,
     baseURL: basePath,
@@ -19,5 +20,5 @@ export function createService<T>(Api: ApiConstructor<T>, basePath: string, authP
     throw error
   })
 
-  return new Api(axios)
+  return new Api(axios, config)
 }
