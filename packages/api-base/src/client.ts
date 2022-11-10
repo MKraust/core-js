@@ -20,6 +20,7 @@ export interface FullRequestParams extends Omit<AxiosRequestConfig, 'data' | 'pa
 export type ConcreteMethodRequestParams = Omit<FullRequestParams, 'path' | 'method'>
 
 export interface HttpClientConfig {
+  requestTimeout?: number
   addSquareBracketsToFormDataArrayKeys?: boolean
 }
 

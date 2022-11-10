@@ -5,9 +5,16 @@ import { HttpClientConfig } from './client'
 export type AuthProvider = { logout: () => void }
 export type ApiConstructor<T> = new (axios: AxiosInstance, config: HttpClientConfig) => T
 
-export function createService<T>(Api: ApiConstructor<T>, basePath: string, authProvider?: AuthProvider, config: HttpClientConfig = {}): T {
+export function createService<T>(
+  Api: ApiConstructor<T>,
+  basePath: string,
+  authProvider?: AuthProvider,
+  config: HttpClientConfig = {},
+): T {
+  const { requestTimeout } = config
+
   const axios = AxiosBase.create({
-    timeout: 59000,
+    timeout: requestTimeout,
     baseURL: basePath,
   })
 
